@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Use python2 if there multiple pythons available
 PYTHON=$(which python)
@@ -14,6 +14,12 @@ export PYTHON
 SOURCE="${BASH_SOURCE[0]}"
 while [ -h "$SOURCE" ] ; do SOURCE="$(readlink "$SOURCE")"; done
 DOTFILES_DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+
+# Load all git dependencies
+cd $DOTFILES_DIR
+git submodule init
+git submodule update
+git submodule sync
 
 # Setup NodeJS
 source "$DOTFILES_DIR/3rdparty/nvm.git/nvm.sh"
