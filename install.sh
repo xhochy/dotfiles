@@ -21,5 +21,10 @@ CURRENT_NODEJS_VERSION=`cat "$DOTFILES_DIR/nodejs/CURRENT_VERSION"`
 nvm install v$CURRENT_NODEJS_VERSION
 nvm use v$CURRENT_NODEJS_VERSION
 
-# Setup CoffeeScript
+# Setup CoffeeScript and other dependencies
 npm install -g coffee-script
+npm install -g muffin
+npm install
+
+# Initially run 'cake update' to link everything
+cake update
