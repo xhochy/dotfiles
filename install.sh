@@ -27,7 +27,7 @@ CURRENT_NODEJS_VERSION=`cat "$DOTFILES_DIR/nodejs/CURRENT_VERSION"`
 nvm install v$CURRENT_NODEJS_VERSION
 nvm use v$CURRENT_NODEJS_VERSION
 if [ "x$NVM_BIN" = "x" ]; then
-    wget http://tulip.hadiko.de/xhochy/nodejs/build/amd64/node-$CURRENT_NODEJS_VERSION -O $DOTFILES_DIR/nodejs/bin
+    wget http://tulip.hadiko.de/xhochy/nodejs/build/amd64/node-$CURRENT_NODEJS_VERSION -O $DOTFILES_DIR/nodejs/bin/node
     export PATH="$DOTFILES_DIR/nodejs/bin:$PATH"
     curl http://npmjs.org/install.sh | sh
 fi
