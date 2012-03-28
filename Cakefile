@@ -8,7 +8,7 @@ HERE = __dirname
 replaceMacros = (str) ->
     str.replace('@@HOME@@', HOME).replace('@@HERE@@', HERE)
 
-task 'update', 'install dotfiles and update the dependencies', (options) ->
+task 'update-symlinks', 'create symlinks', (options) ->
     muffin.run
         files: './apps/**/*.symlink'
         options: options
@@ -28,3 +28,16 @@ task 'update', 'install dotfiles and update the dependencies', (options) ->
                     # Check that the existing link points to the correct location
                     if fs.realpathSync(name) != to
                         console.error("Link #{name} is incorrect!")
+
+task 'update-scripts', 'run post-install scripts', (options) ->
+    muffin.run
+        files: './apps/**/*.dotscript'
+        options: options
+        map:
+            'apps/(.+).dotscript': (matches) -> 
+                console.log("Starting #{matches[0]}")
+                console.log(muffin.exec(matches[0]))
+                        
+task 'update', 'install dotfiles and update the dependencies', (options) ->
+    invoke 'update-symlinks'
+    invoke 'update-scripts'
