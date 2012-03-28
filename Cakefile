@@ -2,8 +2,14 @@ fs = require 'fs'
 muffin = require 'muffin'
 path = require 'path'
 
-HOME = process.env.HOME
-HERE = __dirname
+stripTrailingSlash = (str) ->
+    if str.charAt(str.length) == '/'
+        return stripTrailingSlash(str.substring(0, str.length - 1))
+    else
+        return str
+
+HOME = stripTrailingSlash process.env.HOME
+HERE = stripTrailingSlash __dirname
 
 replaceMacros = (str) ->
     str.replace('@@HOME@@', HOME).replace('@@HERE@@', HERE)
