@@ -1,3 +1,6 @@
+# Include executable coming with this repo
+export PATH="$HOME/.bin:$PATH"
+
 source ~/.zsh/grml.zsh
 
 # Include local configuration which doesn't go into the repo

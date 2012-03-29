@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Get the diretory my dotfiles repo is in.
+SOURCE="${BASH_SOURCE[0]}"
+while [ -h "$SOURCE" ] ; do SOURCE="$(readlink "$SOURCE")"; done
+DOTFILES_DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+
+cd $DOTFILES_DIR
+cake update
