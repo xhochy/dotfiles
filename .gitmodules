@@ -7,6 +7,6 @@
 [submodule "3rdparty/nvm.git"]
 	path = 3rdparty/nvm.git
 	url = https://github.com/creationix/nvm.git
-[submodule "apps/vim/bundles/vundle"]
-	path = apps/vim/bundles/vundle
+[submodule "apps/vim/bundle/vundle"]
+	path = apps/vim/bundle/vundle
 	url = https://github.com/gmarik/vundle.git
