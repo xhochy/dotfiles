@@ -1,1 +1,6 @@
 /node_modules
+/apps/vim/bundle/scala-vim-support/
+/apps/vim/bundle/vim-coffee-script/
+/apps/vim/bundle/vim-colors-solarized/
+/apps/vim/bundle/vim-jade/
+

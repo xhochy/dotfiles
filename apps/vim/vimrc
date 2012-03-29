@@ -3,9 +3,9 @@
 set nocompatible
 
 " load plugin bundles
-filetype off
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
+"filetype off
+"call pathogen#helptags()
+"call pathogen#runtime_append_all_bundles()
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -15,7 +15,6 @@ set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 
-
 " sane tabs
 set shiftwidth=4
 set tabstop=4
@@ -24,23 +23,10 @@ set expandtab
 " 2-space indent for C++
 autocmd BufRead,BufNewFile   *.hpp,*.cpp,*.h set shiftwidth=2 tabstop=2
 
-" filetype plugins
-syntax on
-filetype plugin indent on
-filetype plugin on
-
-" mode for htmldjango
-au BufNewFile,BufRead *.html set filetype=htmldjango
-
 " color long lines
 " set textwidth=80
 " set colorcolumn=+1
 match ErrorMsg '\%>80v.\+'
-
-" hightlight extra whitespace
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
-highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
-match ExtraWhitespace /\s\+\%#\@<!$/
 
 " no annoying temp files
 set noswapfile
@@ -53,23 +39,8 @@ set showmode
 
 filetype plugin on
 
-" From: http://blog.hellyna.com/2010/12/auto-stripping-of-trailing-whitespace.html
-" automatically remove trailing whitespace before write
-function! StripTrailingWhitespace()
-    normal mZ
-    %s/\s\+$//e
-    if line("'Z") != line(".")
-        echo "Stripped whitespace\n"
-    endif
-    normal `Z
-endfunction
-autocmd BufWritePre COMMIT_EDITMSG,.vimrc,*.js,*.pp,*.hpp,*.i,*.c,*.py,*.sh,*.html :call StripTrailingWhitespace()
-
 " bash-like autocomplete behaviour for directories
 set wildmode=list:longest
-
-" disable tab -> spaces for c-oids
-"autocmd BufRead,BufNewFile   *.hpp,*.cpp,*.c,*.h,*.java set noic cin noexpandtab
 
 " remember position in file
 set viminfo='10,\"100,:20,%,n~/.viminfo
@@ -86,20 +57,12 @@ augroup resCur
 augroup END
 """
 
-""" Vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+runtime! vundle.vim
+runtime! solarized.vim
+runtime! trailing-whitespace.vim
 
-" let Vundle manage Vundle
-" required!
-Bundle 'gmarik/vundle'
-Bundle 'rosstimson/scala-vim-support'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'altercation/vim-colors-solarized'
+" filetype plugins
+syntax on
+filetype plugin indent on
+filetype plugin on
 
-set number
-let g:solarized_termtrans = 1
-syntax enable
-set background=dark
-colorscheme solarized
