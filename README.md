@@ -15,4 +15,4 @@ Updating the changes
 
 Just run in your terminal:
 
-    dotfiles-update
+    update-dotfiles
