@@ -1,4 +1,5 @@
 fs = require 'fs'
+mkdirp = require 'mkdirp'
 muffin = require 'muffin'
 path = require 'path'
 
@@ -28,6 +29,9 @@ task 'update-symlinks', 'create symlinks', (options) ->
                 name = filenames[1]
                 # Only create the symlink if it does not exist
                 if !path.existsSync(name)
+                    # Create the directory in which the symlink should reside
+                    if !path.existsSync(path.dirname(name))
+                        mkdirp.sync(path.dirname(name))
                     console.log("Linking #{name} to #{to}")
                     fs.symlinkSync(to, name)
                 else 
@@ -42,7 +46,7 @@ task 'update-scripts', 'run post-install scripts', (options) ->
         map:
             'apps/(.+).dotscript': (matches) -> 
                 console.log("Starting #{matches[0]}")
-                console.log(muffin.exec(matches[0]))
+                muffin.exec(matches[0])
                         
 task 'update', 'install dotfiles and update the dependencies', (options) ->
     invoke 'update-symlinks'

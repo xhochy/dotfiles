@@ -5,6 +5,7 @@
     "author": "Uwe L. Korn <uwelk@xhochy.com>",
     "description": ".files",
     "dependencies": {
-        "muffin": "0.2.x"
+        "muffin": "0.2.x",
+        "mkdirp": "0.3.x"
     }
 }
