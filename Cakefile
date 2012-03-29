@@ -29,7 +29,7 @@ task 'update-symlinks', 'create symlinks', (options) ->
                 # Only create the symlink if it does not exist
                 if !path.existsSync(name)
                     console.log("Linking #{name} to #{to}")
-                    fs.symlink(to, name)
+                    fs.symlinkSync(to, name)
                 else 
                     # Check that the existing link points to the correct location
                     if fs.realpathSync(name) != to
