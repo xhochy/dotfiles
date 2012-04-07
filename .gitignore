@@ -7,3 +7,10 @@
 /apps/zsh/grml.zsh
 /bin/sbt-launch.jar
 /apps/vim/bundle/vim-powerline/
+/apps/vim/bundle/vim-fugitive/
+/apps/vim/bundle/vim-git/
+/apps/vim/bundle/vim-haml/
+/apps/vim/bundle/vim-markdown/
+/apps/vim/bundle/vim-rails/
+/apps/vim/bundle/vim-rake/
+/apps/vim/bundle/vim-tmux/
