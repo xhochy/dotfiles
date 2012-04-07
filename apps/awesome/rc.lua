@@ -7,9 +7,7 @@ require("beautiful")
 -- Notification library
 require("naughty")
 -- Volume widget
-require("volume")
 require("battery")
-
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
