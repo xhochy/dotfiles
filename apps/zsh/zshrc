@@ -9,3 +9,5 @@ if [[ -a ~/.zshrc_local ]]
 then
   source ~/.zshrc_local
 fi
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
