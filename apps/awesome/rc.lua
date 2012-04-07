@@ -364,10 +364,7 @@ function run_once(prg)
 end
 
 -- run_once("/home/uwe/.dropbox-dist/dropboxd")
--- awful.util.spawn_with_shell("/home/uwe/.config/awesome/themes/nice-and-clean-theme/conky/start-conky.sh")
--- awful.util.spawn_with_shell("/usr/bin/wmname LG3D")
 awful.util.spawn_with_shell("xset s off")
 awful.util.spawn_with_shell("xset -dpms")
--- run_once("/usr/bin/wicd-client")
 run_once("/home/uwe/bin/sc.py")
 
