@@ -7,11 +7,11 @@ require("beautiful")
 -- Notification library
 require("naughty")
 -- Volume widget
-require("battery")
+-- require("battery")
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
-beautiful.init("/home/uwe/.config/awesome/themes/darkblue/theme.lua")
+beautiful.init("/home/xhochy/.config/awesome/themes/darkblue/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "terminator"
@@ -347,5 +347,5 @@ end
 -- run_once("/home/uwe/.dropbox-dist/dropboxd")
 awful.util.spawn_with_shell("xset s off")
 awful.util.spawn_with_shell("xset -dpms")
-run_once("/home/uwe/bin/sc.py")
+-- run_once("/home/uwe/bin/sc.py")
 
