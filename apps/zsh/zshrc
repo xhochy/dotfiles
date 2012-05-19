@@ -10,4 +10,7 @@ then
   source ~/.zshrc_local
 fi
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# Add Android SDK to PATH
+export PATH="/opt/android-sdk-update-manager/platform-tools/:${PATH}"
+
+export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
