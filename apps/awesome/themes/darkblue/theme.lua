@@ -9,7 +9,7 @@
 
 -- {{{ Main
 theme = {}
-theme.wallpaper_cmd = {"awsetbg -t -r " .. awful.util.getdir("config") .. "/themes/darkblue/wallpapers/"}
+theme.wallpaper_cmd = {"awsetbg -m 2 -r " .. awful.util.getdir("config") .. "/themes/darkblue/wallpapers/"}
 -- }}}
 
 -- {{{ Styles

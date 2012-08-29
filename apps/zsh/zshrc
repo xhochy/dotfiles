@@ -12,5 +12,8 @@ fi
 
 # Add Android SDK to PATH
 export PATH="/opt/android-sdk-update-manager/platform-tools/:${PATH}"
+# Add Go binaries
+export PATH="/usr/lib/go/bin:${PATH}"
 
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+alias tmux='tmux -2'
