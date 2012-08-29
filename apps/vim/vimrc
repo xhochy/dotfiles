@@ -58,8 +58,19 @@ augroup END
 """
 
 runtime! vundle.vim
-runtime! solarized.vim
+" runtime! solarized.vim
 runtime! trailing-whitespace.vim
+
+
+" appearance
+" Show whitespace
+
+" Force 256 colors in the Terminal
+set t_Co=256
+
+" Adjust the color scheme for a dark background
+set bg=dark
+" colorscheme jellybeans
 
 " filetype plugins
 syntax on
@@ -67,6 +78,7 @@ filetype plugin indent on
 filetype plugin on
 
 " Powerline
-let g:Powerline_colorscheme = 'skwp'
+" let g:Powerline_colorscheme = 'skwp'
 let g:Powerline_symbols = 'fancy'
+let g:hybrid_use_Xresources = 1
 set laststatus=2
