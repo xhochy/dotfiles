@@ -17,3 +17,5 @@ export PATH="/usr/lib/go/bin:${PATH}"
 
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 alias tmux='tmux -2'
+export PATH=/usr/lib64/openldap:$PATH
+export PATH=/usr/sbin/:$PATH
