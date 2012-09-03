@@ -70,7 +70,7 @@ set t_Co=256
 
 " Adjust the color scheme for a dark background
 set bg=dark
-" colorscheme jellybeans
+colorscheme hybrid
 
 " filetype plugins
 syntax on
@@ -78,7 +78,7 @@ filetype plugin indent on
 filetype plugin on
 
 " Powerline
-" let g:Powerline_colorscheme = 'skwp'
 let g:Powerline_symbols = 'fancy'
 let g:hybrid_use_Xresources = 1
 set laststatus=2
+set number
