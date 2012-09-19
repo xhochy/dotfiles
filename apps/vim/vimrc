@@ -23,6 +23,9 @@ set expandtab
 " 2-space indent for C++
 autocmd BufRead,BufNewFile   *.hpp,*.cpp,*.h set shiftwidth=2 tabstop=2
 
+" Recognize sbt files as scala
+au BufRead,BufNewFile *.sbt set filetype=scala
+
 " color long lines
 " set textwidth=80
 " set colorcolumn=+1
