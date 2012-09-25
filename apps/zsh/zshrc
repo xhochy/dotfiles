@@ -19,3 +19,5 @@ export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 alias tmux='tmux -2'
 export PATH=/usr/lib64/openldap:$PATH
 export PATH=/usr/sbin/:$PATH
+
+alias 'emerge-update'='sudo emerge -uDNav @world --complete-graph=y @system @selected --with-bdeps=y'
