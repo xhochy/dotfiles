@@ -20,4 +20,5 @@ alias tmux='tmux -2'
 export PATH=/usr/lib64/openldap:$PATH
 export PATH=/usr/sbin/:$PATH
 
-alias 'emerge-update'='sudo emerge -uDNav @world --complete-graph=y @system @selected --with-bdeps=y'
+alias 'emerge'='sudo emerge --color y --autounmask-write y'
+alias 'emerge-update'='emerge -uDNav @world --complete-graph=y @system @selected --with-bdeps=y'
