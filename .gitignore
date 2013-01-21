@@ -24,3 +24,5 @@
 /apps/vim/bundle/octave.vim--/
 
 bin/sbt-launch-0.12.0.jar
+/apps/vim/bundle/IndentAnything
+/apps/vim/bundle/JavaScript-Indent
