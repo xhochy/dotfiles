@@ -281,6 +281,14 @@ clientbuttons = awful.util.table.join(
     awful.button({ modkey }, 1, awful.mouse.client.move),
     awful.button({ modkey }, 3, awful.mouse.client.resize))
 
+-- Mediakeys directly control tomahawk
+globalkeys = awful.util.table.join(globalkeys,
+    awful.key({ }, "XF86AudioPrev", function () awful.util.spawn("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.tomahawk /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous")  end),
+    awful.key({ }, "XF86AudioPlay", function () awful.util.spawn("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.tomahawk /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause")  end),
+    awful.key({ }, "XF86AudioStop", function () awful.util.spawn("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.tomahawk /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop")  end),
+    awful.key({ }, "XF86AudioNext", function () awful.util.spawn("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.tomahawk /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next")  end)
+)
+
 -- Set keys
 root.keys(globalkeys)
 -- }}}
