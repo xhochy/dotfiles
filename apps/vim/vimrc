@@ -85,3 +85,7 @@ let g:Powerline_symbols = 'fancy'
 let g:hybrid_use_Xresources = 1
 set laststatus=2
 set number
+
+" CrtlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'

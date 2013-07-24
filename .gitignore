@@ -26,3 +26,5 @@
 bin/sbt-launch-0.12.0.jar
 /apps/vim/bundle/IndentAnything
 /apps/vim/bundle/JavaScript-Indent
+/apps/vim/bundle/YouCompleteMe
+/apps/vim/bundle/ctrlp.vim
