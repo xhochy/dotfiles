@@ -1,0 +1,10 @@
+#!/bin/bash
+
+VERSION=1.9
+
+if [ ! -f "$HOME/.bin/gradle-$VERSION/bin/gradle" ]; then
+    wget http://services.gradle.org/distributions/gradle-$VERSION-bin.zip
+    unzip gradle-$VERSION-bin.zip
+fi
+
+$HOME/.bin/gradle-$VERSION/bin/gradle "$@"
