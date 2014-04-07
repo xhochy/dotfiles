@@ -28,3 +28,7 @@ bin/sbt-launch-0.12.0.jar
 /apps/vim/bundle/JavaScript-Indent
 /apps/vim/bundle/YouCompleteMe
 /apps/vim/bundle/ctrlp.vim
+/apps/vim/bundle/Dockerfile.vim/
+/apps/vim/bundle/julia-vim/
+/apps/vim/bundle/vim-gitgutter/
+/apps/vim/bundle/vim-opencl/
