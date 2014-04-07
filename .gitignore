@@ -32,3 +32,4 @@ bin/sbt-launch-0.12.0.jar
 /apps/vim/bundle/julia-vim/
 /apps/vim/bundle/vim-gitgutter/
 /apps/vim/bundle/vim-opencl/
+/bin/gradle-*
