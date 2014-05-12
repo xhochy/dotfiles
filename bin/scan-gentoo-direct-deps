@@ -1,0 +1,3 @@
+#!/bin/bash
+qlist -e "$@" | xargs scanelf -L -n -q -F '%n #F' | tr , ' '  | awk '{print $1;}' | xargs qfile -Cv | sort -u | awk '{print $1}' | uniq
+
