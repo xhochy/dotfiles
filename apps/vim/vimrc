@@ -73,7 +73,8 @@ set t_Co=256
 
 " Adjust the color scheme for a dark background
 set bg=dark
-colorscheme hybrid
+let g:hybrid_use_Xresources = 1
+colorscheme jellybeans
 
 " filetype plugins
 syntax on
