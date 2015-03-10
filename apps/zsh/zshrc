@@ -26,7 +26,7 @@ export PATH="$HOME/Development/dist/bin:$PATH"
 export PKG_CONFIG_PATH="$HOME/Development/dist/lib/pkgconfig:$PKG_CONFIG_PATH"
 
 alias 'emerge'='sudo emerge --color y --autounmask-write y'
-alias 'emerge-update'='emerge -uDNav @world --complete-graph=y @system @selected --with-bdeps=y'
+alias 'emerge-update'='emerge -uDNav @world --complete-graph=y @system @selected --with-bdeps=y --deep'
 
 # If not set, use /tmp as the XDG_RUNTIME_DIR
 if test -z "${XDG_RUNTIME_DIR}"; then
