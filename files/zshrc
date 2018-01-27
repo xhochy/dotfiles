@@ -1,0 +1,11 @@
+source ~/.zsh/grml.zsh
+
+# Include local configuration which doesn't go into the repo
+# (can also be machine-specific)
+if [[ -a ~/.zshrc_local ]]
+then
+  source ~/.zshrc_local
+fi
+
+eval "$(direnv hook zsh)"
+export PATH="$HOME/miniconda3/bin:$PATH"

@@ -1,0 +1,16 @@
+---
+- hosts: localhost
+  gather_facts: false
+  tasks:
+  - file: path=~/.zsh state=directory
+  - get_url:
+      url: https://git.grml.org/f/grml-etc-core/etc/zsh/zshrc
+      dest: ~/.zsh/grml.zsh
+  - copy:
+      src: zshrc
+      dest: ~/.zshrc
+  - file: path=~/.config state=directory
+  - file: path=~/.config/nvim state=directory
+  - copy:
+      src: init.vim
+      dest: ~/.config/nvim/init.vim
