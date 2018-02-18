@@ -20,6 +20,11 @@ colorscheme NeoSolarized
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
+" Disable swp files
+set noswapfile
+set nobackup
+set nowb
+
 setl shiftwidth=2
 au FileType cpp setl shiftwidth=2
 au FileType python setl shiftwidth=4
