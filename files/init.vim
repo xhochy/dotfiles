@@ -9,6 +9,9 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'posva/vim-vue'
+if has('python3')
+  Plug 'ambv/black'
+endif
 call plug#end()
 
 " Colorscheme
