@@ -9,3 +9,6 @@ fi
 
 eval "$(direnv hook zsh)"
 export PATH="$HOME/miniconda3/bin:$PATH"
+
+# added by travis gem
+[ -f /home/uwe/.travis/travis.sh ] && source /home/uwe/.travis/travis.sh

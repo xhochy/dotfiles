@@ -32,3 +32,4 @@ au FileType javascript setl shiftwidth=2
 au FileType vue setl shiftwidth=2
 " Jenkinsfiles are groovy
 au BufNewFile,BufRead Jenkinsfile setf groovy
+au BufNewFile,BufRead *.pxi setf python
