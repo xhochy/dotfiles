@@ -9,6 +9,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'posva/vim-vue'
+Plug 'ntpeters/vim-better-whitespace'
 if has('python3')
   Plug 'ambv/black'
 endif
