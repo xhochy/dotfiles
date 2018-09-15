@@ -10,6 +10,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'posva/vim-vue'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'thinca/vim-quickrun'
 if has('python3')
   Plug 'ambv/black'
 endif
@@ -37,3 +38,6 @@ au FileType vue setl shiftwidth=2
 " Jenkinsfiles are groovy
 au BufNewFile,BufRead Jenkinsfile setf groovy
 au BufNewFile,BufRead *.pxi setf python
+
+" Add quickrun abbreviation to run python
+ca Qrp QuickRun >message python
