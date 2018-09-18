@@ -25,6 +25,9 @@ colorscheme NeoSolarized
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
+" Markdown
+let g:markdown_fenced_languages = ['ruby', 'python']
+
 " Disable swp files
 set noswapfile
 set nobackup
